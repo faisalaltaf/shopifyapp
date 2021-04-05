@@ -38,7 +38,7 @@
                 var app = createApp({
                     apiKey: '{{ \Osiset\ShopifyApp\getShopifyConfig('api_key', Auth::user()->name ) }}',
                     shopOrigin: '{{ Auth::user()->name }}',
-                    forceRedirect: true,
+                    forceRedirect: false,
                 });
             </script>
 
