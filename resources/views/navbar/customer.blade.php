@@ -2,6 +2,8 @@
 
 @section('content')
    
+
+   
    customer
 @endsection
 @section('scripts')

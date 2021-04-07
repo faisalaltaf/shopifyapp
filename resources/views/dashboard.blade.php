@@ -1,8 +1,14 @@
 @extends('shopify-app::layouts.default')
 
 @section('content')
-   
+
+
+
+
+ 
+
    Dashboard
+
 @endsection
 @section('scripts')
     @parent
@@ -21,4 +27,3 @@
     </script>
 
 @endsection
-

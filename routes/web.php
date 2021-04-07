@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\ThemeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,18 +15,27 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
 
-Route::get('/', function () {
-    return view('dashboard');
-})->middleware(['auth.shopify'])->name('home');
 
-Auth::routes();
 
-// Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/get_all_themes',[ThemeController::class,'getAllThemes']);
+Route::middleware(['auth.shopify'])->group(function () {
 
-Route::view('/product','navbar.product');
-Route::view('/customer','navbar.customer');
-Route::view('/setting','navbar.setting');
+    Route::get('/', function () {
+        return view('dashboard');
+    })->middleware(['auth.shopify'])->name('home');
+
+    Auth::routes();
+
+    // Route::get('/home', 'HomeController@index')->name('home');
+
+    Route::view('/product', 'navbar.product');
+    Route::view('/customer', 'navbar.customer');
+    Route::view('/setting', 'navbar.setting');
+
+
+    Route::get('test', function () {
+
+        
+    });
+});

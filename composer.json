@@ -15,6 +15,7 @@
         "laravel/framework": "^7.29",
         "laravel/tinker": "^2.5",
         "laravel/ui": "^2.5",
+        "osiset/basic-shopify-api": "^10.0",
         "osiset/laravel-shopify": "^16.0"
     },
     "require-dev": {
